@@ -1,4 +1,3 @@
-
 import { startStandaloneServer } from '@apollo/server/standalone';
 import {ApolloServer} from "@apollo/server";
 import { typeDefs } from './schema/type-defs.js';

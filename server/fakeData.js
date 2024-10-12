@@ -5,6 +5,7 @@ export const UserList = [
         username: "john",
         age: 20,
         nationality: "CANADA",
+        movies: "Interstellar",
         friends: [
             {
                 id: 2,
@@ -28,6 +29,7 @@ export const UserList = [
         username: "PedroTech",
         age: 20,
         nationality: "BRAZIL",
+        movies: "Interstellar",
     },
     {
         id: 3,
@@ -51,6 +53,7 @@ export const UserList = [
         username: "rafe123",
         age: 60,
         nationality: "GERMANY",
+        movies: "",
     },
     {
         id: 5,
