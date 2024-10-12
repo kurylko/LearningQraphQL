@@ -5,6 +5,7 @@ export const resolvers = {
         users: () => UserList,
         movies: () => MovieList,
         movie:(_, args) => MovieList.find((movie) => movie.name === args.name),
+        user:(_, args) => UserList.find((user) => user.name === args.name),
     }
 };
 

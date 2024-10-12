@@ -5,7 +5,8 @@ type User {
   name: String!
   userName: String!
   age: Int!
-  nationality: String
+  nationality: String,
+  friends: [String]
 }
 
 type Movie {
@@ -18,5 +19,6 @@ type Query {
 users: [User!]!
 movies: [Movie]
 movie(name: String!): Movie
+user(name: String!): User
 }
 `;
