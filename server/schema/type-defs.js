@@ -6,7 +6,7 @@ type User {
   userName: String!
   age: Int!
   nationality: String,
-  friends: [String]
+  friends: [User!]
 }
 
 type Movie {
