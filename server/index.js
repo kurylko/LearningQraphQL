@@ -1,7 +1,7 @@
-const express = require('express');
-const  {ApolloServer } = require('apollo-server');
-const { typeDefs } = require('./schema/type-defs');
-const { resolvers } = require('./schema/resolvers');
+
+import { ApolloServer } from 'apollo-server';
+import { typeDefs } from './schema/type-defs.js';
+import { resolvers } from './schema/resolvers.js';
 
 const server = new ApolloServer({typeDefs, resolvers});
 

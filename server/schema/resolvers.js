@@ -1,12 +1,11 @@
-const {UserList} = require('../fakeData');
+import { UserList } from '../fakeData.js';
 
-const resolvers = {
+export const resolvers = {
     Query: {
         users() {
-            return UserList
+            return UserList;
         }
     }
 };
 
-module.exports = {resolvers};
 
