@@ -1,10 +1,9 @@
-import { UserList } from '../fakeData.js';
+import {MovieList, UserList} from '../fakeData.js';
 
 export const resolvers = {
     Query: {
-        users() {
-            return UserList;
-        }
+        users: () => UserList,
+        movies: () => MovieList
     }
 };
 

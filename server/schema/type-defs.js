@@ -1,6 +1,5 @@
-import { gql } from 'apollo-server';
 
-export const typeDefs = gql`
+export const typeDefs = `#graphql
 type User {
   id: ID!
   name: String!
@@ -9,7 +8,14 @@ type User {
   nationality: String
 }
 
+type Movie {
+   id: Int!,
+   name: String!,
+   yearOfPublication: Int,
+   isInTheaters: Boolean,
+}
 type Query {
-  users: [User!]!
+users: [User!]!
+movies: [Movie]
 }
 `;
