@@ -17,5 +17,6 @@ type Movie {
 type Query {
 users: [User!]!
 movies: [Movie]
+movie(name: String!): Movie
 }
 `;

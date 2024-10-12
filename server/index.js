@@ -9,8 +9,21 @@ const server = new ApolloServer({
 });
 
 const { url } = await startStandaloneServer(server, {
-    listen: {port: 4000}
+
+    context: ({ req }) => {
+        return {};
+    },
+    // CORS setup
+    listen: {
+        port: process.env.PORT || 4000,
+        cors: {
+            origin: "https://studio.apollographql.com",
+            credentials: true,
+        }
+    }
 });
+
+
 
 console.log(`API is running at ${url}`);
 
