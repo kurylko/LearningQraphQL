@@ -29,7 +29,14 @@ type Review {
 
 type Mutation {
     deleteMovie(name: String!) : [Movie],
-    addMovie(movie: AddMovieInput!) : Movie
+    addMovie(movie: AddMovieInput!) : Movie,
+    updateMovie(name: String!, edits: EditMovieInput!): Movie
+}
+
+input EditMovieInput {
+    name: String,
+    yearOfPublication: Int,
+    isInTheaters: Boolean,
 }
 
 input AddMovieInput {
@@ -37,6 +44,8 @@ input AddMovieInput {
     yearOfPublication: Int,
     isInTheaters: Boolean,
 }
+
+
 
 type Query {
     users: [User!]!

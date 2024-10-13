@@ -36,6 +36,19 @@ export const resolvers = {
             };
             MovieList.push(newMovie);
             return newMovie;
+        },
+        updateMovie(_, args) {
+            const movieIndex = MovieList.findIndex(movie => movie.name === args.name);
+            if (movieIndex === -1) {
+                throw new Error('Movie not found');
+            }
+            const updatedMovie = {
+                ...MovieList[movieIndex],
+                ...args.edits
+            };
+            MovieList[movieIndex] = updatedMovie;
+
+            return updatedMovie;
         }
     }
 };
