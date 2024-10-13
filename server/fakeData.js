@@ -1,4 +1,4 @@
-export const UserList = [
+export let UserList = [
     {
         id: 1,
         name: "John",
@@ -65,7 +65,7 @@ export const UserList = [
 ];
 
 
-export const MovieList = [
+export let MovieList = [
     {
         id: 1,
         name: "Avengers Endgame",
@@ -90,9 +90,15 @@ export const MovieList = [
         yearOfPublication: 2035,
         isInTheaters: false,
     },
+    {
+        id: 5,
+        name: "Pedro",
+        yearOfPublication: 2000,
+        isInTheaters: false,
+    },
 ];
 
-export const ReviewList = [
+export let ReviewList = [
     {
         id: "xy34h57",
         author: "John",

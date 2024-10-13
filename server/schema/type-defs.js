@@ -27,6 +27,10 @@ type Review {
     movieId: ID!,
 }
 
+type Mutation {
+    deleteMovie(name: String!) : [Movie]
+}
+
 type Query {
     users: [User!]!
     movies: [Movie]
