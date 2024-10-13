@@ -23,6 +23,19 @@ export const resolvers = {
                 MovieList.splice(index, 1);
             }
             return MovieList;
+        },
+
+        addMovie(_, args) {
+            const movie = args.movie;
+            const newMovie = {
+                id: MovieList.length + 1,
+                name: movie.name,
+                yearOfPublication: movie.yearOfPublication,
+                isInTheaters: movie.isInTheaters,
+                reviews: []
+            };
+            MovieList.push(newMovie);
+            return newMovie;
         }
     }
 };
