@@ -5,7 +5,7 @@ export const UserList = [
         username: "john",
         age: 20,
         nationality: "CANADA",
-        movies: "Interstellar",
+        movies: ["Interstellar", "Avengers Endgame"],
         friends: [
             {
                 id: 2,
@@ -29,7 +29,7 @@ export const UserList = [
         username: "PedroTech",
         age: 20,
         nationality: "BRAZIL",
-        movies: "Interstellar",
+        movies: ["Interstellar"],
     },
     {
         id: 3,
@@ -89,5 +89,32 @@ export const MovieList = [
         name: "PedroTech The Movie",
         yearOfPublication: 2035,
         isInTheaters: false,
+    },
+];
+
+export const ReviewList = [
+    {
+        id: "xy34h57",
+        author: "John",
+        authorId: 1,
+        movieName: "PedroTech The Movie",
+        text: "Not bad",
+        movieId: 4,
+    },
+    {
+        id: "xy34h50",
+        author: "Kelly",
+        authorId: 5,
+        movieName: "PedroTech The Movie",
+        text: "cool film",
+        movieId: 4,
+    },
+    {
+        id: "xy34h56",
+        author: "John",
+        authorId: 1,
+        movieName: "Interstellar",
+        text: "cool film",
+        movieId: 2,
     },
 ];
