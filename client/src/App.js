@@ -3,8 +3,10 @@ import {ApolloClient, InMemoryCache, ApolloProvider, HttpLink, from} from "@apol
 import {onError} from "@apollo/client/link/error";
 import {GetUsers} from "./Components/GetUsers";
 import {LOAD_USERS} from "./GraphQL/Queries";
+import {CREATE_USER_MUTATION} from "./GraphQL/Mutation";
 import {MockedProvider} from "@apollo/client/testing";
 import {Users} from "./fakeData";
+import {Form} from "./Components/Form";
 
 const errorLink = onError(({graphQLErrors, networkError}) => {
     if (graphQLErrors) {
@@ -40,6 +42,22 @@ const mocks = [
             },
         },
     },
+    {
+        request: {
+            query: CREATE_USER_MUTATION,
+            variables: {
+                name: "Amy Lee",
+                email: "amy@com"
+            },
+        },
+        result: {
+            data: {
+                createUser: {
+                    id: 1
+                },
+            },
+        },
+    },
 ];
 
 
@@ -50,6 +68,7 @@ function App() {
             <MockedProvider mocks={mocks} addTypename={false}>
                 <div className="App">
                     <h1>Hello!</h1>
+                    <Form/>
                     <GetUsers/>
                 </div>
             </MockedProvider>
