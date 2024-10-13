@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {CREATE_USER_MUTATION} from "./../GraphQL/Mutation";
+import {CREATE_USER_MUTATION} from "../GraphQL/Mutation";
 import {useMutation} from "@apollo/client";
 
 export const Form = () => {
